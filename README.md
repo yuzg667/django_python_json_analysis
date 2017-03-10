@@ -12,4 +12,4 @@ django_python写一个在线json解析工具。
 
 即可。
 预览图如下：
-![image](https://github.com/yuzg667/django_python_json_analysis/tree/master/img/预览图.png)
+![image](https://github.com/yuzg667/django_python_json_analysis/blob/master/img/%E9%A2%84%E8%A7%88%E5%9B%BE.png)
