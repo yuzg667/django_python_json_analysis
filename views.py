@@ -15,29 +15,27 @@ def py_json(request):
                 js = json.loads(form_commit)
                 json.dumps(js)
                 message = json.dumps(js,indent=3,ensure_ascii=False)
-                #ÏÂ±ßÕâ¸ö·½·¨Ò²¿ÉÒÔ
+                #ä¸‹è¾¹è¿™ä¸ªæ–¹æ³•ä¹Ÿå¯ä»¥
                 # loads=demjson.decode(form_commit)
                 # message=json.dumps(loads, indent=3, sort_keys=False, ensure_ascii=False)
             except Exception:
-                 message = 'ÄúÌá½»µÄjson¸ñÊ½²»ÕıÈ·Å¶~'
+                 message = 'æ‚¨æäº¤çš„jsonæ ¼å¼ä¸æ­£ç¡®å“¦~'
 
         else: 
             form_commit = u'''    {
-                                "Json½âÎö":"ÊäÈëÄãµÄjson°É£¡",
-                                "ÈËÔÆÒàÔÆtools":"Ï²»¶¾ÍÊÕ²Ø¡¢·ÖÏí°É"
+                                "Jsonè§£æ":"è¾“å…¥ä½ çš„jsonå§ï¼",
+                                "äººäº‘äº¦äº‘tools":"å–œæ¬¢å°±æ”¶è—ã€åˆ†äº«å§"
                                 }'''
-            message = u'ÇëÊäÈëÄãµÄjson´úÂë°É~'
+            message = u'è¯·è¾“å…¥ä½ çš„jsonä»£ç å§~'
 
     else:
         form_commit = u'''      {
-                                "Json½âÎö":"ÊäÈëÄãµÄjson°É£¡",
-                                "ÈËÔÆÒàÔÆtools":"Ï²»¶¾ÍÊÕ²Ø¡¢·ÖÏí°É"
+                                "Jsonè§£æ":"è¾“å…¥ä½ çš„jsonå§ï¼",
+                                "äººäº‘äº¦äº‘tools":"å–œæ¬¢å°±æ”¶è—ã€åˆ†äº«å§"
                                 }'''
-        message = u'×ó²à¿òÄÚÊäÈëjsonÅ¶~'
+        message = u'å·¦ä¾§æ¡†å†…è¾“å…¥jsonå“¦~'
 
     #return render(request, 'tools/pyjson.html',ctx)
     return render(request, 'tools/pyjson.html',{'message':message, 
                                                 'form_commit':form_commit,
-
-
                                                             })
